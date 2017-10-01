@@ -1,0 +1,133 @@
+<h1 class="page-header">Settings</h1>
+
+<div class="row">
+
+	<!--password-->
+	<div class="col-xs-12 col-sm-9 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Login Settings</h3>
+			</div>
+			<div class="panel-body">
+				<form method="POST" action="./setuser">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12">
+								<label for="newusername">New Login</label>
+								<div class="input-group">
+									<span class="input-group-addon glyphicon glyphicon-user" aria-hidden="true" id="basic-addon1"></span>
+									<input type="text" class="form-control" id="newusername" name="newusername" placeholder="New Username">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="input-group">
+									<span class="input-group-addon glyphicon glyphicon-lock" aria-hidden="true" id="basic-addon1"></span>
+									<input type="password" class="form-control" id="newpassword" name="newpassword" placeholder="New Password">
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="input-group">
+									<span class="input-group-addon glyphicon glyphicon-lock" aria-hidden="true" id="basic-addon1"></span>
+									<input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-12">
+								<label for="password">Current Password</label>
+								<div class="input-group">
+									<span class="input-group-addon glyphicon glyphicon-lock" aria-hidden="true" id="basic-addon1"></span>
+									<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-success">Update</button>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+	<!--Only for Admin-->
+	<check if="{{ 0==@SESSION.role }}">
+		<true>
+			<!--Top News Duration-->
+			<div class="col-xs-12 col-sm-9 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Top News Duration</h3>
+					</div>
+					<div class="panel-body">
+						<form enctype="multipart/form-data" role="form" id="info-form" action="./api/preference/topduration" method="POST">
+							<div class="form-group">
+								<label for="topduration">How long the news will stay in the top News Section.</label>
+								<select id='topduration' name="value" class="form-control">
+							<option value="1" {{ (@topduration=='1')?'selected="selected"':'' }}>Day</option>
+							<option value="7" {{ (@topduration=='7')?'selected="selected"':'' }}>Week</option>
+							<option value="30" {{ (@topduration=='30')?'selected="selected"':'' }}>Month</option>
+							<option value="365" {{ (@topduration=='365')?'selected="selected"':'' }}>Year</option>
+						</select>
+							</div>
+							<button type="submit" class="btn btn-success">Save</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!--Show Author Name-->
+			<div class="col-xs-12 col-sm-9 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Show Author Name</h3>
+					</div>
+					<div class="panel-body">
+						<form enctype="multipart/form-data" role="form" id="info-form" action="./api/preference/showauthorname" method="POST">
+							<div class="form-group">
+								<select id='showauthorname' name="value" class="form-control">
+							<option value="1" {{ (@showauthorname=='1')?'selected="selected"':'' }}>Show Author Name</option>
+							<option value="0" {{ (@showauthorname=='0')?'selected="selected"':'' }}>Do Not Show</option>
+						</select>
+							</div>
+							<button type="submit" class="btn btn-success">Save</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!--Show Feature Image-->
+			<div class="col-xs-12 col-sm-9 col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">Show Feature Image</h3>
+					</div>
+					<div class="panel-body">
+						<form enctype="multipart/form-data" role="form" id="info-form" action="./api/preference/showfeatureimage" method="POST">
+							<div class="form-group">
+								<label for="showfeatureimage">If enabled, the Article images will appear above the article title.</label>
+								<select id='showfeatureimage' name="value" class="form-control">
+							<option value="1" {{ (@showfeatureimage=='1')?'selected="selected"':'' }}>Show Feature Image</option>
+							<option value="0" {{ (@showfeatureimage=='0')?'selected="selected"':'' }}>Do Not Show</option>
+						</select>
+							</div>
+							<button type="submit" class="btn btn-success">Save</button>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</true>
+	</check>
+
+</div>

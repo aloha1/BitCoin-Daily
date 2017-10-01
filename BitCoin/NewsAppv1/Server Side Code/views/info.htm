@@ -1,0 +1,17 @@
+<h1 class="page-header">Information Page</h1>
+
+<div class="row">
+  <div class="col-xs-12 col-md-9 col-lg-6">
+
+    <form  enctype="multipart/form-data" role="form" id="info-form"  action="./api/preference/info" method="POST">
+      <div class="form-group">
+        <label for="info-form-htmleditor"></label>  
+        <div  name="value" class="form-control summernote">{{@default|raw}}</div>
+        <textarea hidden name="value">{{@default|raw}}}</textarea>
+      </div>
+      <input type="submit" class="btn btn-success">
+
+    </form>
+    
+  </div>
+</div>

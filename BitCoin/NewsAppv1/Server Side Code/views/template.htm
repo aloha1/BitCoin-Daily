@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="./images/favicon.ico">
+
+  <title>News App Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css">
+  <link href="summernote/summernote.css" rel="stylesheet">
+  <link href="modalmaker/modalmaker.css" rel="stylesheet">
+  <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link href="iconpicker/css/bootstrap-iconpicker.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+          aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#">News App Template
+          <check if="{{ @DEMO}}">
+            <true>
+              (Demo Mode)
+            </true>
+          </check>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello, {{@SESSION.user}} ({{@SESSION.role_title}}) <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="./settings">Settings</a></li>
+              <li><a href="./logout">Sign Out</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-xs-9 col-sm-3 col-md-2 sidebar row-offcanvas ">
+        <ul class="nav nav-sidebar">
+          <li><a href="./">Dashboard</a></li>
+          <li><a href="./news">News Articles</a></li>
+          <check if="{{ 0==@SESSION.role }}">
+            <true>
+              <li><a href="./categories">Categories</a></li>
+              <li><a href="./info">Info</a></li>
+              <true>
+                <li><a href="./users">Users</a></li>
+              </true>
+            </true>
+          </check>
+          <li><a href="./push">Push Notifications</a></li>
+          <li><a href="./settings">Settings</a></li>
+          <li><a href="./logout">Sign Out</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <include href='{{@content}}' />
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+  </script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/script.js"></script>
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+
+  <!-- summernote js-->
+  <script src="summernote/summernote.js"></script>
+
+  <!-- Modalmaker js-->
+  <script src="modalmaker/modalmaker.js"></script>
+  <script src="{{@BASE}}/modalmaker/sharemodal.js"></script>
+
+  <!--iconpicker-->
+  <script type="text/javascript" src="iconpicker/js/iconset/iconset-fontawesome-4.0.0.min.js"></script>
+  <script type="text/javascript" src="iconpicker/js/bootstrap-iconpicker.min.js"></script>
+
+  <!--Date Time picker-->
+  <script type="text/javascript" src="js/moment.js"></script>
+  <script type="text/javascript" src="bootstrap/js/transition.js"></script>
+  <script type="text/javascript" src="bootstrap/js/collapse.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+
+</body>
+
+</html>

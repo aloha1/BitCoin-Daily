@@ -1,0 +1,212 @@
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  background-color: #fff;
+  position: relative;
+  margin-right: 5px;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+
+
+/*
+*Public Home
+*/
+
+h1{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    font-size: 62px;
+    font-size: 6.1333333333rem;
+    line-height: 1.064516129;
+    margin-bottom: 20px;
+}
+
+h5{
+   display: inline;
+}
+
+p{
+    color: #262626;
+    margin-bottom: 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-size: 1.9rem;
+    line-height: 1.6666666667;
+}
+
+@media screen and (max-width: 480px) {
+   h1{
+    font-size: 30px;
+    font-size: 3.1333333333rem;
+  }
+}
+
+
+.footer a:hover, .footer a:visited, .footer a:link, .footer a:active{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.navbar-brand{
+ font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    font-size: 25px;
+    margin-left: 5px !important;
+}
+
+
+.navbar-inverse {
+  border-color:#fff;
+}
+
+.publicnav{
+  background-color: #F44336;
+  color:#fff;
+}
+
+.publicnav a{
+  color:#fff !important;
+}
+
+.searchbar {
+  height: 300px;
+  background-color: #03A9F4;
+  position: relative;
+}
+
+.box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container-1{
+  width: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-1 input#home-search-videos{
+  width: 100%;
+  height: 50px;
+  background: #0288D1;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #fff;
+  padding-left: 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background .55s ease;
+  -moz-transition: background .55s ease;
+  -ms-transition: background .55s ease;
+  -o-transition: background .55s ease;
+  transition: background .55s ease;
+}
+
+.container-1 input#home-search-videos::-webkit-input-placeholder {
+   color: #eee;
+}
+ 
+.container-1 input#home-search-videos:-moz-placeholder { /* Firefox 18- */
+   color: #eee;  
+}
+ 
+.container-1 input#home-search-videos::-moz-placeholder {  /* Firefox 19+ */
+   color: #eee;  
+}
+ 
+.container-1 input#home-search-videos:-ms-input-placeholder {  
+   color: #eee;  
+}
+
+.container-1 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 17px;
+  margin-top: 17px;
+  z-index: 1;
+  color: #fff;
+}
+
+.container-1 input#home-search-videos:hover, .container-1 input#home-search-videos:focus, .container-1 input#home-search-videos:active{
+    outline:none;
+    background: #0273b1;
+}
+
+#home-item-container .post{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    padding-bottom: 1px;
+}
+
+
+#home-item-container .post .video{
+    width: 100%;
+}
+
+
+#home-item-container .post .details {
+    margin-top: 10px;
+}
+
+#home-item-container .post .details div{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 16px;
+    color: #757575;
+    display: inline;
+    padding: 20px;
+}
+
+#home-item-container .post i{
+    margin-right: 5px;
+}
+
+
+#home-item-container .user-details{
+    margin: 20px;
+    color: #757575;
+}
+
+.error404{
+      margin-top: 100px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 30px;
+      padding: 20px;
+      color: #212121;
+      text-align: center;
+}
+
+
+/**
+ * Footer Styles
+ */
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #212121;
+  text-align: center;
+}

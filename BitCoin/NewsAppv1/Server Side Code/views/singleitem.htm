@@ -1,0 +1,18 @@
+<div class="row">
+    <div id="home-item-container" class="col-xs-12 col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+        <div class="post">
+            <div>
+                <h1>{{@item.name}}</h1>
+            </div>
+             
+            <div><h5><i class="fa fa-clock-o"></i> <span>{{@item.submission_date}}</span></h5>
+ 
+                <button type="button" data-url="{{@serverurl}}/{{@item.id}}" class=" open-share-modal btn btn-default pull-right">Share</button>
+     </div>
+            <img src="{{@BASE}}/uploads/{{@item.firstimage}}" width='640' class="video">
+          
+
+            <div>{{@item.text| raw }}</div>
+        </div>
+    </div>
+</div>

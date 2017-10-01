@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{@BASE}}/images/favicon.ico">
+
+    <title>News App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{@BASE}}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{@BASE}}/bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{@BASE}}/css/public_style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.css"/>
+
+    <!-- summernote css-->
+    <link href="{{@BASE}}/summernote/summernote.css" rel="stylesheet">
+
+
+
+    <!-- Font Awesome -->
+    <link href="{{@BASE}}/modalmaker/modalmaker.css" rel="stylesheet">
+    <link href="{{@BASE}}/iconpicker/css/bootstrap-iconpicker.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <include href="{{@meta}}" if="isset(@meta)"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar publicnav navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>-->
+          <a class="navbar-brand" href="{{@BASE}}/">News App</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+        <include href='{{@content}}' />
+        <p>{{@textcontent}}</p> 
+    </div>
+
+    <div class="footer">
+      <div class="row">
+    <div  class="col-xs-12 col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">
+      <p><a target="_blank" href="http://www.neurondigital.com/" >NeuronDigital © 2017</a></p>
+    </div>
+</div>
+    </div>
+
+    <div id="sharemodal-placeholder"></div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{@BASE}}/js/jquery.min.js"><\/script>')</script>
+    <script src="{{@BASE}}/bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{@BASE}}/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{@BASE}}/js/script.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.12/datatables.min.js"></script>
+
+    <!-- summernote js-->
+    <script src="{{@BASE}}/summernote/summernote.js"></script>
+
+    <script src="{{@BASE}}/modalmaker/modalmaker.js"></script>
+    <script src="{{@BASE}}/modalmaker/sharemodal.js"></script>
+
+    <!--iconpicker-->
+    <script type="text/javascript" src="{{@BASE}}/iconpicker/js/iconset/iconset-fontawesome-4.0.0.min.js"></script>
+    <script type="text/javascript" src="{{@BASE}}/iconpicker/js/bootstrap-iconpicker.min.js"></script>
+
+    <script type="text/javascript">
+      var base= "{{@BASE}}";
+      var serverurl = "{{@serverurl}}"
+    </script>
+
+  </body>
+</html>
